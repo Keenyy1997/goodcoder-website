@@ -37,11 +37,21 @@
         font-size: $text;
         font-family: VictorMono;
         font-weight: bold;
-        color: $secondary-color;
+        color: $thirdary-color;
+
+        &:hover {
+          color: $secondary-color;
+        }
+
       }
 
       .active {
         color: $primary-color;
+
+        &:hover {
+          color: $primary-color;
+        }
+
       }
 
     }

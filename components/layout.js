@@ -7,7 +7,10 @@ function LayoutComponent ({ children, seo }) {
   return (
     <div className="app--container">
       <Head>
-        <title>{ seo?.metaTitle || 'Default Site Title' } | GoodCoder</title>
+        <title>
+          { seo?.metaTitle || 'Default Site Title' }
+          { seo?.titleSuffix !== false ? ' | GoodCoder' : null }
+        </title>
         <link rel="icon" href="/favicon.ico" />
 
         {/* Meta Tags */}
