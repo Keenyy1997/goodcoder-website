@@ -1,0 +1,15 @@
+// COLORS
+$primary-color: #FBC533;
+$secondary-color: #1A252E;
+$secondary-opacity-85: rgba(26, 37, 46, 0.85);
+$thirdary-color: #747777;
+$optional-color: #0F5F76;
+
+// TEXT COLORS
+$light-text: #fff;
+$dark-text: $secondary-color;
+
+// BACKGROUND COLORS
+$primary-bg-color: $primary-color;
+$primary-hover-color: darken($primary-color, 15%);
+$white-bg: #fff;

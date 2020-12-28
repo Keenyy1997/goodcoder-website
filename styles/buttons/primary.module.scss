@@ -1,0 +1,28 @@
+@import '../texts/sizes';
+@import '../fonts/fonts';
+@import '../colors';
+
+.button--primary {
+  border: 0;
+  background-color: $primary-bg-color;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 0px 0px #000;
+  
+  cursor: pointer;
+  color: $dark-text;
+
+  font-size: $title;
+  font-family: VictorMono;
+  font-weight: bold;
+
+  padding: 0.5em 1.5em;
+
+  transition: .15s ease;
+
+  width: auto;
+  
+  &:hover {
+    transform: translateX(2.5px);
+    background-color: $primary-hover-color;
+  }
+}

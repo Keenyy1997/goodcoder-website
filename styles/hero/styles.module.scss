@@ -1,0 +1,71 @@
+@import '../colors';
+@import '../fonts/fonts';
+@import '../texts/sizes';
+
+.hero {
+  width: 100%;
+  position: relative;
+
+  .hero--background {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    background-color: $secondary-opacity-85;
+    img {
+      position: relative;
+      width: 100%;
+      height: 30rem;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+
+  .hero--content {
+    position: absolute;
+    $topSpacing: 30%;
+    top: $topSpacing;
+    transform: translateY(-$topSpacing);
+    left: 0;
+    width: 100%;
+
+    .hero--content--container {
+      box-sizing: border-box;
+      
+      color: $light-text;
+
+      padding: 1.5em;
+
+      max-width: 1440px;
+      margin: auto;
+
+      width: 100%;
+      
+      h1, p {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: $header;
+        font-family: VictorMono;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: $text;
+        font-family: Poppins;
+        width: 760px;
+        display: block;
+        min-height: 6.5em;
+        max-height: 6.5em;
+      }
+    }
+  }
+}
+
+#go_to_article_button {
+  margin-top: 4rem;
+}
