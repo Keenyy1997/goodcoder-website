@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <Layout 
       seo={{ 
-        metaTitle: 'GoodCoder | Artículos de Usabilidad en Javascript',
+        metaTitle: 'GoodCoder | Artículos de Usabilidad en Javascript y Tecnologías de la Programación',
         titleSuffix: false,
       }}>
       <TopBar />
@@ -19,8 +19,6 @@ export default function Home() {
       <HeroItem />
 
       <LatestPosts />
-
-      <Container style={{ height: '100vh'}} />
     </Layout>
-  )
+  );
 }

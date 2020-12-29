@@ -2,16 +2,12 @@ import React from 'react';
 
 // Components
 import Title from '../texts/title';
-import Text from '../texts';
+import Text, { ShortTexts } from '../texts';
 import Container from '../container';
 import PrimaryButton from '../buttons/primary';
 
 // Styles
 import styles from '../../styles/hero/styles.module.scss';
-
-function ShortTexts(value) {
-  return value.length > 220 ? `${value.substr(0,220)}...` : value;
-}
 
 function HeroMain({
   background = '/assets/code-bg.jpg',

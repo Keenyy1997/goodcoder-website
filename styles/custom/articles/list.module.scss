@@ -1,0 +1,47 @@
+@import '../../colors';
+@import '../../responsive';
+
+.card--list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-align: left;
+  $separationSpace: 2%;
+  gap: $separationSpace;
+  margin-top: 2.5rem;
+
+  a {
+    margin-bottom: $separationSpace;
+    width: 23%;
+
+    @include media(lg) {
+      width: 23%;
+    }
+
+    @include media(md) {
+      width: 30%;
+    }
+
+    @include media(sm) {
+      width: 47.5%;
+    }
+
+    @include media(xs) {
+      width: 100%;
+    }
+  }
+
+}
+
+#card__list__container {
+  padding: 1.5em;
+  box-sizing: border-box;
+  margin: 3.5rem auto;
+  max-width: 1440px;
+
+  .card__list__container--title {
+    color: $dark-text;
+  }
+
+}
