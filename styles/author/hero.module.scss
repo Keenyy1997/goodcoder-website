@@ -1,0 +1,24 @@
+.hero--author {
+  width: auto;
+  display: flex;
+  margin: 1em auto;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5em !important;
+
+  .hero--author--photo {
+    $photoSize: 3rem;
+    width: $photoSize;
+    height: $photoSize;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5em;
+  }
+
+  h1 {
+    padding: 0 !important;
+    margin: 0 !important;
+    font-weight: normal !important;
+    color: #fff !important;
+  }
+}

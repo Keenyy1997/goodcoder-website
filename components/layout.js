@@ -11,7 +11,7 @@ function LayoutComponent ({ globalSettings, children, seo }) {
       <Head>
         <title>
           { seo?.metaTitle || defaultSeo?.metaTitle || 'Default Site Title' }
-          { seo?.titleSuffix !== false ? `| ${siteName}` : null }
+          { seo?.titleSuffix !== false ? ` | ${siteName}` : null }
         </title>
         <link rel="icon" href="/favicon.ico" />
 

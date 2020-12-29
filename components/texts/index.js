@@ -2,10 +2,10 @@ import React from 'react';
 
 const MAX_LENGTH = 250;
 
-function Text({ children }) {
+function Text({ children, className, ...props }) {
 
-  let Classes = ['text'];
-  return <p className={Classes.join(' ')}>{children}</p>;
+  const Classes = ['text', className];
+  return <p {...props} className={Classes.join(' ')}>{children}</p>;
 }
 
 export function ShortTexts(value) {

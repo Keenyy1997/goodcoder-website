@@ -23,11 +23,24 @@ function HeroMain({ article }) {
       </div>
       <div className={styles['hero--content']}>
         <Container className={styles['hero--content--container']}>
-          <Title className={styles['title']}>{ title }</Title>
-          <Text className={styles['description']}>{ ShortTexts(description) }</Text>
+          <Title 
+            data-aos="fade-right"
+            data-aos-duration="350"
+            data-aos-delay="150"
+            className={styles['title']}>{ title }</Title>
+          <Text
+            data-aos="fade-right"
+            data-aos-duration="350"
+            data-aos-delay="250" 
+            className={styles['description']}>{ ShortTexts(description) }</Text>
           {
             slug && (
-              <PrimaryButton id={styles['go_to_article_button']} link={`/articles/${slug}`}>{ 'GO TO ARTICLE' }</PrimaryButton>
+              <PrimaryButton
+                data-aos="fade-right"
+                data-aos-duration="350"
+                data-aos-delay="100" 
+                id={styles['go_to_article_button']} 
+                link={`/articles/${slug}`}>{ 'GO TO ARTICLE' }</PrimaryButton>
             )
           }
         </Container>

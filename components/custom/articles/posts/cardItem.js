@@ -12,14 +12,14 @@ import Text, { ShortTexts } from '../../../texts';
 // Styles
 import styles from '../../../../styles/custom/articles/card.module.scss';
 
-function CardItem({ data }) {
+function CardItem({ data, ...props }) {
 
   const { slug, title, description, published_at, image } = data;
 
   return (
     <Link href={`/articles/${slug}`}>
       <a>
-        <div className={styles['card--item']}>
+        <div className={styles['card--item']} {...props}>
           <div className={styles['card--item--image']}>
             <Image
               src={ image?.url || 'assets/code-bg.jpg'}

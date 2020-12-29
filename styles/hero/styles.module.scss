@@ -69,6 +69,47 @@
         max-height: 6.5em;
       }
     }
+
+    .hero--article--content--container {
+      box-sizing: border-box;
+      
+      color: $light-text;
+
+      padding: 1.5em;
+
+      max-width: 1440px;
+      margin: auto;
+
+      width: 100%;
+      height: 30rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      h1, p {
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        font-weight: bold;
+        font-size: $header;
+        font-family: VictorMono;
+        margin-bottom: 0.5em;
+        text-align: center;
+        height: 60%;
+        padding-top: 5rem;
+        box-sizing: border-box;
+        color: $primary-color;
+      }
+
+      cite {
+        text-align: center;
+        display: block;
+        font-family: VictorMono;
+        font-style: normal;
+      }
+    }
   }
 }
 

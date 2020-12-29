@@ -11,11 +11,13 @@ function CardList({ list = []}) {
   return (
     <div className={styles['card--list']}>
       {
-        list.map((item) => {
+        list.map((item, index) => {
           return (
             <CardItem
               key={item.slug}
               data={item}
+              data-aos="fade-right"
+              data-aos-delay={index * 150}
             />
           );
         })

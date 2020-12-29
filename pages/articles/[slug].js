@@ -1,13 +1,16 @@
 import React from 'react';
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // Components
 import TopBar from '../../components/topbar';
 import Layout from '../../components/layout';
 
 // Custom Components
-import HeroItem from '../../components/hero/main';
-import Container from '../../components/container';
-import LatestPosts from '../../components/custom/articles/posts/listPosts';
+import HeroItem from '../../components/hero/article';
+import ArticleContent from '../../components/custom/articles/content';
 import Footer from '../../components/footer';
 
 
@@ -17,17 +20,44 @@ import { apolloClient } from '../../lib/apollo';
 
 export default function ArticlePage({ global, article }) {
 
+  React.useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    AOS.init({
+      once: true,
+      disable: 'mobile',
+    });
+  }, []);
+
+  React.useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
+
   console.log('[ARTICLE]', article);
   
   return (
     <Layout
       globalSettings={global}
       seo={{
-        titleSuffix: false,
+        titleSuffix: true,
+        metaTitle: article?.title,
+        metaDescription: article?.description,
+        shareImage: article?.image?.url
       }}>
       <TopBar />
 
-      <h1>Article: {article.title}</h1>
+      <HeroItem
+        article={article}
+      />
+
+      <ArticleContent
+        article={article}
+      />
 
       <Footer />
     </Layout>

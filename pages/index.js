@@ -1,5 +1,9 @@
 import React from 'react';
 
+// AOS
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 // Components
 import TopBar from '../components/topbar';
 import Layout from '../components/layout';
@@ -16,6 +20,25 @@ import { gql } from '@apollo/client';
 import { apolloClient } from '../lib/apollo';
 
 export default function Home({ global, articles }) {
+
+  React.useEffect(() => {
+    /**
+     * Server-side rendering does not provide the 'document' object
+     * therefore this import is required either in useEffect or componentDidMount as they
+     * are exclusively executed on a client
+     */
+    AOS.init({
+      once: true,
+      disable: 'mobile',
+    });
+  }, []);
+
+  React.useEffect(() => {
+    if (AOS) {
+      AOS.refresh();
+    }
+  });
+
   return (
     <Layout
       globalSettings={global}

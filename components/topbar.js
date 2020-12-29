@@ -31,6 +31,9 @@ function TopBar() {
           <Link href={'/'}>
             <a>
               <ImageComponent
+                data-aos="fade-left"
+                data-aos-duration="500"
+                data-aos-delay="200"
                 src={'assets/logos/logo-light.png'}
                 alt={'GoodCoder Brand Logotype'}
                 height={60}
@@ -43,7 +46,10 @@ function TopBar() {
             Links.map((item) => {
               return (
                 <Link href={item.path} key={item.path}>
-                  <a 
+                  <a
+                    data-aos="fade-left"
+                    data-aos-duration="500"
+                    data-aos-delay="150"
                     className={
                       [
                         styles['link--item'], 

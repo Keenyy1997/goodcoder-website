@@ -13,7 +13,13 @@ import styles from '../../../../styles/custom/articles/list.module.scss';
 function ListPosts({ articles }) {
   return (
     <Container id={styles['card__list__container']}>
-      <Subtitle className={styles['card__list__container--title']}>{'Ultimos Articulos'}</Subtitle>
+      <Subtitle
+        as="h2"
+        data-aos="fade-right"
+        data-aos-duration="450"
+        className={styles['card__list__container--title']}>
+          {'Ultimos Articulos'}
+      </Subtitle>
 
       <CardList list={articles} />                                                                                                                                                                                                                                                                       
     </Container>
