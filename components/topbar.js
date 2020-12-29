@@ -29,7 +29,7 @@ function TopBar() {
       <Container className={styles['topbar--container']}>
         <div className={styles['logo']}>
           <ImageComponent
-            src={'/assets/logo-light.png'}
+            src={'/assets/logos/logo-light.png'}
             alt={'GoodCoder Brand Logotype'}
             height={60}
           />
