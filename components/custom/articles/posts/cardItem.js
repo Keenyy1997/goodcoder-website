@@ -12,22 +12,18 @@ import Text, { ShortTexts } from '../../../texts';
 // Styles
 import styles from '../../../../styles/custom/articles/card.module.scss';
 
-function CardItem({
-  image = '/assets/code-bg.jpg',
-  title = 'Article Name',
-  description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim...',
-  createdAt = '2020-12-27 23:15:00',
-  link = '/article-name'
-}) {
+function CardItem({ data }) {
+
+  const { slug, title, description, published_at, image } = data;
 
   return (
-    <Link href={link}>
+    <Link href={`/articles/${slug}`}>
       <a>
         <div className={styles['card--item']}>
           <div className={styles['card--item--image']}>
             <Image
-              src={'/assets/code-bg.jpg'}
-              alt={'Code Background'}
+              src={ image?.url || 'assets/code-bg.jpg'}
+              alt={ image?.caption }
               height={200}
             />
           </div>
@@ -37,7 +33,7 @@ function CardItem({
 
             <cite>
               Publicado el&nbsp;
-              { moment(createdAt).format('DD MMM, YYYY') }
+              { moment(published_at).format('DD MMM, YYYY') }
             </cite>
           </div>
         </div>

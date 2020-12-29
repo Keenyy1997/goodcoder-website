@@ -1,15 +1,18 @@
 import React from 'react';
 
+// Media
+import { getStrapiMedia } from '../lib/media';
+
 function ImageComponent({
-  alt = 'No Description Available.',
+  alt,
   src,
   ...props
 }) {
 
   return (
     <img
-      src={src}
-      alt={alt}
+      src={getStrapiMedia(src)}
+      alt={alt || 'No Description Available.'}
       {...props}
     />
   );

@@ -15,11 +15,11 @@ const Links = [
     isActive: true,
     label: 'Artículos',
   },
-  {
-    path: '/technologies',
-    isActive: false,
-    label: 'Tecnologías',
-  },
+  // {
+  //   path: '/technologies',
+  //   isActive: false,
+  //   label: 'Tecnologías',
+  // },
 ];
 
 function TopBar() {
@@ -28,17 +28,21 @@ function TopBar() {
     <div className={styles['topbar']}>
       <Container className={styles['topbar--container']}>
         <div className={styles['logo']}>
-          <ImageComponent
-            src={'/assets/logos/logo-light.png'}
-            alt={'GoodCoder Brand Logotype'}
-            height={60}
-          />
+          <Link href={'/'}>
+            <a>
+              <ImageComponent
+                src={'assets/logos/logo-light.png'}
+                alt={'GoodCoder Brand Logotype'}
+                height={60}
+              />
+            </a>
+          </Link>
         </div>
         <div className={styles['links']}>
           {
             Links.map((item) => {
               return (
-                <Link href={item.path}>
+                <Link href={item.path} key={item.path}>
                   <a 
                     className={
                       [

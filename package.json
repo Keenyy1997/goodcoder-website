@@ -13,10 +13,16 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.6",
+    "gql": "^1.1.2",
+    "graphql": "^15.4.0",
     "moment": "^2.29.1",
     "next": "10.0.4",
+    "next-apollo": "^5.0.4",
     "react": "17.0.1",
+    "react-apollo": "^3.1.5",
     "react-dom": "17.0.1",
+    "recompose": "^0.30.0",
     "sass": "^1.30.0",
     "styled-components": "^5.2.1"
   }

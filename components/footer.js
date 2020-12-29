@@ -12,7 +12,7 @@ function Footer() {
   return (
     <div id={styles['footer']}>
       <Image
-        src={'/assets/logos/logo-dark.png'}
+        src={'assets/logos/logo-dark.png'}
         alt={'GoodCoder Dark Themed Logotype'}
         height={75}
       />
@@ -20,7 +20,7 @@ function Footer() {
         <a target={"_blank"}>
           <div className={styles['footer--social-media']}>
             <Image
-              src={'/assets/social/ig.png'}
+              src={'assets/social/ig.png'}
               alt={'Instagram Logotype'}
               height={30}
             />
