@@ -5,6 +5,8 @@
 .hero {
   width: 100%;
   position: relative;
+  background: transparent;
+  z-index: 1;
 
   .hero--background {
     width: 100%;

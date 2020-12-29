@@ -6,6 +6,7 @@ import Layout from '../components/layout';
 import HeroItem from '../components/hero/main';
 import Container from '../components/container';
 import LatestPosts from '../components/custom/articles/posts/listPosts';
+import Footer from '../components/footer';
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <HeroItem />
 
       <LatestPosts />
+
+      <Footer />
     </Layout>
   );
 }
