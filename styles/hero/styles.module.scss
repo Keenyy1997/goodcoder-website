@@ -1,6 +1,7 @@
 @import '../colors';
 @import '../fonts/fonts';
 @import '../texts/sizes';
+@import '../responsive';
 
 .hero {
   width: 100%;
@@ -57,6 +58,22 @@
         font-size: $header;
         font-family: VictorMono;
         margin-bottom: 0.5em;
+
+        @include media(lg) {
+          font-size: $header;
+        }
+
+        @include media(md) {
+          font-size: $large-title;
+        }
+
+        @include media(sm) {
+          font-size: $large-title;
+        }
+
+        @include media(xs) {
+          font-size: $large-title;
+        }
       }
 
       p {
@@ -67,6 +84,22 @@
         display: block;
         min-height: 6.5em;
         max-height: 6.5em;
+
+        @include media(md) {
+          width: 750px;
+        }
+
+        @include media (sm) {
+          width: 80%;
+          font-size: 1.3em;
+          min-height: 100%;
+        }
+
+        @include media(xs) {
+          width: 100%;
+          font-size: 1.2em;
+          min-height: 100%;
+        }
       }
     }
 
@@ -85,6 +118,22 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @include media(lg) {
+        height: 30rem;
+      }
+
+      @include media(md) {
+        height: 30rem;
+      }
+
+      @include media(sm) {
+        height: 100%;
+      }
+
+      @include media(xs) {
+        height: 100%;
+      }
       
       h1, p {
         margin: 0;
@@ -101,6 +150,29 @@
         padding-top: 5rem;
         box-sizing: border-box;
         color: $primary-color;
+
+        @include media(lg) {
+          height: 60%;
+          padding-top: 5rem;
+        }
+
+        @include media(md) {
+          height: 60%;
+          padding-top: 5rem;
+        }
+
+        @include media(sm) {
+          height: 100%;
+          padding-top: 1.5rem;
+          font-size: $large-title;
+        }
+
+        @include media(xs) {
+          height: 100%;
+          padding-top: 1.5rem;
+          font-size: $large-title;
+        }
+
       }
 
       cite {

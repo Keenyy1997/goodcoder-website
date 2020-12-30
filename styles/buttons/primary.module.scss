@@ -1,6 +1,7 @@
 @import '../texts/sizes';
 @import '../fonts/fonts';
 @import '../colors';
+@import '../responsive';
 
 .button--primary {
   border: 0;
@@ -20,6 +21,14 @@
   transition: .15s ease;
 
   width: auto;
+
+  @include media(sm) {
+    font-size: $text;
+  }
+
+  @include media(xs) {
+    font-size: $text;
+  }
   
   &:hover {
     transform: translateX(2.5px);

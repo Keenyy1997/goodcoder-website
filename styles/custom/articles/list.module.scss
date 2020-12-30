@@ -8,11 +8,11 @@
   justify-content: flex-start;
   text-align: left;
   $separationSpace: 2%;
-  gap: $separationSpace;
   margin-top: 2.5rem;
 
   a {
     margin-bottom: $separationSpace;
+    margin-right: $separationSpace;
     width: 23%;
 
     @include media(lg) {
@@ -29,6 +29,7 @@
 
     @include media(xs) {
       width: 100%;
+      margin-right: 0%;
     }
   }
 
