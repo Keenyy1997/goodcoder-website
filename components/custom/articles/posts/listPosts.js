@@ -18,7 +18,7 @@ function ListPosts({ articles }) {
         data-aos="fade-right"
         data-aos-duration="450"
         className={styles['card__list__container--title']}>
-          {'Ultimos Articulos'}
+          {'Últimos Artículos'}
       </Subtitle>
 
       <CardList list={articles} />                                                                                                                                                                                                                                                                       

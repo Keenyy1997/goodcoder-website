@@ -40,7 +40,7 @@ function HeroMain({ article }) {
                 data-aos-duration="350"
                 data-aos-delay="100" 
                 id={styles['go_to_article_button']} 
-                link={`/articles/${slug}`}>{ 'GO TO ARTICLE' }</PrimaryButton>
+                link={`/articles/${slug}`}>{ 'VER EL ARTÍCULO' }</PrimaryButton>
             )
           }
         </Container>

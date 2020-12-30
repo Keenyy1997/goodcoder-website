@@ -24,8 +24,8 @@ function Footer() {
               alt={'Instagram Logotype'}
               height={30}
             />
-            <Title>
-              Follow us on IG!
+            <Title as="h3">
+              Síguenos en Instagram!
               <span className="social--link">
                 @goodcoder.js
               </span>

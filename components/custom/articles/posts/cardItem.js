@@ -6,7 +6,7 @@ import moment from 'moment';
 
 // Components
 import Image from '../../../image';
-import Subtitle from '../../../texts/title';
+import Title from '../../../texts/title';
 import Text, { ShortTexts } from '../../../texts';
 
 // Styles
@@ -28,7 +28,7 @@ function CardItem({ data, ...props }) {
             />
           </div>
           <div className={styles['card--item--content']}>
-            <Subtitle>{ title }</Subtitle>
+            <Title as="h3">{ title }</Title>
             <Text>{ ShortTexts(description) }</Text>
 
             <cite>
