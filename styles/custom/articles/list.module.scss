@@ -40,6 +40,8 @@
   box-sizing: border-box;
   margin: 3.5rem auto;
   max-width: 1440px;
+  min-height: 77.5vh;
+  height: 100%;
 
   .card__list__container--title {
     color: $dark-text;
