@@ -1,6 +1,7 @@
 @import '../colors';
 @import '../texts/sizes';
 @import '../fonts/fonts';
+@import '../responsive';
 
 .topbar {
   width: 100%;
@@ -9,6 +10,23 @@
   z-index: 100;
   background-color: $white-bg;
   margin-bottom: 0em;
+  top: 0;
+
+  @include media(lg) {
+    position: relative;
+  }
+
+  @include media(md) {
+    position:relative;
+  }
+
+  @include media(sm) {
+    position: sticky;
+  }
+
+  @include media(xs) {
+    position: sticky;
+  }
 
   &--container {
     padding: 0.5em 1.5em;
@@ -34,6 +52,22 @@
       justify-content: flex-end;
       align-items: center;
 
+      @include media(lg) {
+        display: flex;
+      }
+
+      @include media(md) {
+        display: flex;
+      }
+
+      @include media(sm) {
+        display: flex;
+      }
+
+      @include media(xs) {
+        display: none;
+      }
+
       .link--item {
         margin-right: 1.5em;
         font-size: $text;
@@ -58,6 +92,74 @@
 
     }
 
+    .menu--mobile {
+      min-width: 150px;
+      width: 60%;
+      display: none;
+      text-align: right;
+
+      @include media(lg) {
+        display: none;
+      }
+
+      @include media(md) {
+        display: none;
+      }
+
+      @include media(sm) {
+        display: none;
+      }
+      @include media(xs) {
+        display: block;
+      }
+
+      img {
+        height: 100%;
+      }
+    }
+
+    .links--mobile {
+      width: 100%;
+      margin: 1em auto;
+      box-sizing: border-box;
+      display: none;
+      max-height: 15rem;
+      overflow-y: auto;
+
+      @include media(sm) {
+        display: none;
+      }
+
+      @include media(xs) {
+        display: block;
+      }
+
+      .link--item--mobile {
+        font-size: $title;
+        margin-bottom: 1em;
+        color: $dark-text;
+      }
+
+      .link--item--mobile.active {
+        color: $primary-color;
+      }
+    }
+
+    @include media(lg) {
+      flex-wrap: nowrap;
+    }
+
+    @include media(md) {
+      flex-wrap: nowrap;
+    }
+
+    @include media(sm) {
+      flex-wrap: nowrap;
+    }
+
+    @include media(xs) {
+      flex-wrap: wrap;
+    }
   }
 
 }

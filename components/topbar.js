@@ -4,7 +4,7 @@ import React from 'react';
 // Components
 import Container from '../components/container';
 import ImageComponent from '../components/image';
-import Text from '../components/texts';
+import Title from '../components/texts/title';
 
 // Styles
 import styles from '../styles/topbar/styles.module.scss';
@@ -23,6 +23,11 @@ const Links = [
 ];
 
 function TopBar() {
+  const [ menu, setMenu ] = React.useState(false);
+
+  function toggleMenu() {
+    setMenu((val) => !val);
+  }
 
   return (
     <div className={styles['topbar']}>
@@ -56,15 +61,52 @@ function TopBar() {
                         item.isActive ? styles['active'] : null
                       ].join(' ')
                     }>
-                    <Text>
+                    <Title as="h3">
                       { item.label }
-                    </Text>
+                    </Title>
                   </a>
                 </Link>
               );
             })
           }
         </div>
+        <div className={styles['menu--mobile']}>
+          <ImageComponent
+            src={"assets/icons/burger-menu.svg"}
+            height={40}
+            alt={"Burger Menu"}
+            onClick={toggleMenu}
+          />
+        </div>
+
+        {
+          menu && (
+            <div className={styles['links--mobile']}>
+              {
+                Links.map((item) => {
+                  return (
+                    <Link href={item.path} key={item.path}>
+                      <a
+                        data-aos="fade-left"
+                        data-aos-duration="500"
+                        data-aos-delay="150"
+                        className={
+                          [
+                            styles['link--item--mobile'], 
+                            item.isActive ? styles['active'] : null
+                          ].join(' ')
+                        }>
+                        <Title as="h3">
+                          { item.label }
+                        </Title>
+                      </a>
+                    </Link>
+                  );
+                })
+              }
+            </div>
+          )
+        }
       </Container>
     </div>
   );
