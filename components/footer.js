@@ -25,7 +25,7 @@ function Footer() {
               height={30}
             />
             <Title as="h3">
-              Síguenos en Instagram!
+              ¡Síguenos en Instagram!
               <span className="social--link">
                 @goodcoder.js
               </span>
