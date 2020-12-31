@@ -127,6 +127,7 @@
       display: none;
       max-height: 15rem;
       overflow-y: auto;
+      text-align: right;
 
       @include media(sm) {
         display: none;
@@ -137,8 +138,8 @@
       }
 
       .link--item--mobile {
-        font-size: $title;
-        margin-bottom: 1em;
+        font-size: 1.25em;
+        margin-bottom: 1.5em;
         color: $dark-text;
       }
 
