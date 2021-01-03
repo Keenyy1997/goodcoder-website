@@ -147,9 +147,12 @@
         margin-bottom: 0.5em;
         text-align: center;
         height: 60%;
+        max-width: 60%;
+        margin: auto;
         padding-top: 5rem;
         box-sizing: border-box;
-        color: $primary-color;
+        // color: $primary-color;
+        color: #fff;
 
         @include media(lg) {
           height: 60%;

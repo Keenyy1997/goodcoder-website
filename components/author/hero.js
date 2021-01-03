@@ -19,7 +19,7 @@ function AuthorHero({ author }) {
         className={styles['hero--author--photo']}
       />
 
-      <Title className={styles['hero--author--name']}>
+      <Title as='h2' className={styles['hero--author--name']}>
         { author?.name }
       </Title>
     </div>

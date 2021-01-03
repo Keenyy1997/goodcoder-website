@@ -3,6 +3,7 @@ import Link from 'next/link';
 
 // Third
 import moment from 'moment';
+moment.locale('es');
 
 // Components
 import Image from '../../../image';
@@ -32,8 +33,8 @@ function CardItem({ data, ...props }) {
             <Text>{ ShortTexts(description) }</Text>
 
             <cite>
-              Publicado el&nbsp;
-              { moment(published_at).format('DD MMM, YYYY') }
+              PUBLICADO EL&nbsp;
+              { moment(published_at).format('MMMM DD, YYYY').toLocaleUpperCase() }
             </cite>
           </div>
         </div>

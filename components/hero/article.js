@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+moment.locale('es');
 
 // Components
 import Title from '../texts/title';
@@ -32,8 +33,8 @@ function HeroMain({ article }) {
           />
 
           <cite>
-            Publicado el&nbsp;
-            { moment(published_at).format('DD MMM, YYYY') }
+            PUBLICADO EL&nbsp;
+            { moment(published_at).format('MMMM DD, YYYY').toLocaleUpperCase() }
           </cite>
         </Container>
       </div>
