@@ -172,6 +172,7 @@
 
         @include media(xs) {
           height: 100%;
+          max-width: 100%;
           padding-top: 1.5rem;
           font-size: $large-title;
         }
