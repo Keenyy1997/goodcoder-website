@@ -4,8 +4,8 @@
 
 #article__content {
   width: 100%;
-  max-width: 1024px;
-  margin:auto;
+  max-width: 600;
+  margin: auto;
   padding: 3em 1.5em;
   box-sizing: border-box;
   min-height: 77.5vh;
@@ -29,9 +29,8 @@
 
   p {
     font-family: Poppins, Arial, Helvetica, sans-serif;
-    font-size: 1.1em;
+    font-size: 16px;
     color: #555;
-    letter-spacing: 1px;
     margin: 1em auto;
   }
 

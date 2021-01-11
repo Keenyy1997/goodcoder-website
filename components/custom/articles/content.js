@@ -29,6 +29,7 @@ function ArticleContent({ article }) {
     <Container id={styles['article__content']}>
       <ReactMarkdown
         source={article.content}
+        allowDangerousHtml
         renderers={Renderers}
       />
     </Container>
